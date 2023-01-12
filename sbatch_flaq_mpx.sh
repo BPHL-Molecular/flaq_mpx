@@ -12,6 +12,6 @@
 #SBATCH --error=flaq_mpx.%j.err
 
 #Run script/command and use $SLURM_CPUS_ON_NODE
-module load singularity
+module load apptainer
 
 python flaq_mpx.py fastqs/ --primer_bed primers/MPXV.primer.bed --lib_frag frag --threads $SLURM_CPUS_ON_NODE --ref_fasta reference/MPXV.reference.fasta --ref_gff reference/MPXV.gff3 
